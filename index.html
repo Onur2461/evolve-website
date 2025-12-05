@@ -846,27 +846,31 @@
       </p>
 
       <div class="contact-grid">
-        <form class="contact-card" action=https://formspree.io/f/mdkqddel" method="POST">
-
-          <div>
-            <label for="naam">Naam</label>
-            <input id="naam" type="text" placeholder="Jouw naam" required />
-          </div>
-          <div>
-            <label for="rijschool">Naam rijschool</label>
-            <input id="rijschool" type="text" placeholder="Bijv. Rijschool Evolve" required />
-          </div>
-          <div>
-            <label for="email">E-mailadres</label>
-            <input id="email" type="email" placeholder="jij@rijschool.nl" required />
-          </div>
-          <div>
-            <label for="telefoon">Telefoonnummer</label>
-            <input id="telefoon" type="tel" placeholder="06 – ..." />
-          </div>
-          <div>
-            <label for="bericht">Waar wil je vooral in groeien?</label>
-            <textarea id="bericht" placeholder="Bijv. meer leerlingen in de avond / meer aanvragen via Instagram..."></textarea>
+       <form class="contact-card" action="https://formspree.io/f/mdkqddel" method="POST">
+  <div>
+    <label for="naam">Naam</label>
+    <input id="naam" name="naam" type="text" placeholder="Jouw naam" required />
+  </div>
+  <div>
+    <label for="rijschool">Naam rijschool</label>
+    <input id="rijschool" name="rijschool" type="text" placeholder="Bijv. Rijschool Evolve" required />
+  </div>
+  <div>
+    <label for="email">E-mailadres</label>
+    <input id="email" name="email" type="email" placeholder="jij@rijschool.nl" required />
+  </div>
+  <div>
+    <label for="telefoon">Telefoonnummer</label>
+    <input id="telefoon" name="telefoon" type="tel" placeholder="06 – ..." />
+  </div>
+  <div>
+    <label for="bericht">Waar wil je vooral in groeien?</label>
+    <textarea id="bericht" name="bericht" placeholder="Bijv. meer leerlingen in de avond / meer aanvragen via Instagram..."></textarea>
+  </div>
+  <div>
+    <button class="btn-primary" type="submit">Verstuur & plan kennismaking</button>
+  </div>
+</form>
           </div>
           <div>
             <button class="btn-primary" type="submit">Verstuur & plan kennismaking</button>
