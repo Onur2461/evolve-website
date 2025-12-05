@@ -83,4 +83,818 @@
       white-space: nowrap;
     }
 
-    .btn-primary:hover
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 22px 55px rgba(34, 197, 94, 0.5);
+      filter: brightness(1.05);
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      padding: 0.75rem 1.4rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.8);
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 0.9rem;
+      background: transparent;
+      color: #e5e7eb;
+      text-decoration: none;
+      transition: background 0.2s ease, border 0.2s ease, transform 0.15s ease;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(15, 23, 42, 0.9);
+      transform: translateY(-1px);
+    }
+
+    main {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 2.25rem 1.5rem 3.5rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.1fr);
+      gap: 2.8rem;
+      align-items: center;
+      padding: 3rem 2.2rem;
+      margin-top: 2.2rem;
+      border-radius: 1.9rem;
+      background: radial-gradient(circle at top left, #1d2436, #020617 65%);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      box-shadow:
+        0 30px 120px rgba(15, 23, 42, 0.9),
+        0 0 80px rgba(56, 189, 248, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(circle at 0% 0%, rgba(56, 189, 248, 0.18), transparent 60%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-kicker {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #a5b4fc;
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .hero-kicker span.dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 15px rgba(34, 197, 94, 0.9);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.1rem, 3.3vw, 2.8rem);
+      margin-bottom: 1rem;
+      color: #f9fafb;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(120deg, #38bdf8, #22c55e);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      font-size: 0.98rem;
+      color: #cbd5f5;
+      margin-bottom: 1.5rem;
+      max-width: 32rem;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+
+    .hero-meta span {
+      display: flex;
+      gap: 0.4rem;
+      align-items: center;
+    }
+
+    .hero-meta strong {
+      color: #e5e7eb;
+    }
+
+    .badge {
+      padding: 0.32rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      font-size: 0.8rem;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+
+    .hero-card {
+      position: relative;
+      z-index: 1;
+      border-radius: 1.5rem;
+      background: radial-gradient(circle at top, #020617, #020617 60%);
+      color: #e5e7eb;
+      padding: 1.6rem 1.4rem;
+      box-shadow: 0 24px 50px rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+    }
+
+    .hero-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.8rem;
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+
+    .hero-card-pill {
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(56, 189, 248, 0.5);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #bae6fd;
+    }
+
+    .hero-card h2 {
+      font-size: 1rem;
+      margin-bottom: 0.8rem;
+      color: #e5e7eb;
+    }
+
+    .hero-card p {
+      font-size: 0.86rem;
+      color: #9ca3af;
+      margin-bottom: 1rem;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.8rem;
+      margin-top: 0.5rem;
+      font-size: 0.78rem;
+    }
+
+    .metric {
+      padding: 0.7rem 0.8rem;
+      border-radius: 0.9rem;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(31, 41, 55, 0.8);
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 0.95rem;
+      color: #e5e7eb;
+    }
+
+    .metric span {
+      color: #9ca3af;
+    }
+
+    section {
+      margin-top: 3.2rem;
+    }
+
+    section h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+      color: #e5e7eb;
+    }
+
+    section p.section-intro {
+      color: #9ca3af;
+      font-size: 0.95rem;
+      margin-bottom: 1.6rem;
+      max-width: 32rem;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+      font-size: 0.78rem;
+    }
+
+    .pill-row span {
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      color: #9ca3af;
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      background: radial-gradient(circle at top left, #020617, #020617 70%);
+      border-radius: 1.25rem;
+      padding: 1.35rem;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(30, 64, 175, 0.7);
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
+      color: #e5e7eb;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #9ca3af;
+    }
+
+    .card small {
+      display: block;
+      margin-top: 0.3rem;
+      font-size: 0.76rem;
+      color: #64748b;
+    }
+
+    .steps {
+      counter-reset: step;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .step {
+      position: relative;
+      padding-left: 2.2rem;
+    }
+
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0.1rem;
+      width: 1.6rem;
+      height: 1.6rem;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.18);
+      border: 1px solid rgba(129, 140, 248, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      color: #e0f2fe;
+      box-shadow: 0 0 18px rgba(59, 130, 246, 0.8);
+    }
+
+    .step h3 {
+      font-size: 0.95rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .step p {
+      font-size: 0.86rem;
+      color: #94a3b8;
+    }
+
+    .pricing {
+      display: grid;
+      gap: 1.4rem;
+    }
+
+    .price-tag {
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .price-tag span {
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: #9ca3af;
+    }
+
+    .price-list {
+      list-style: none;
+      margin-top: 0.6rem;
+      font-size: 0.86rem;
+      color: #cbd5f5;
+    }
+
+    .price-list li {
+      margin-bottom: 0.25rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.35rem;
+    }
+
+    .price-list li::before {
+      content: "✔";
+      font-size: 0.8rem;
+      margin-top: 0.05rem;
+      color: #22c55e;
+    }
+
+    .faq-item {
+      border-radius: 1rem;
+      border: 1px solid rgba(51, 65, 85, 0.9);
+      padding: 1rem 1.1rem;
+      background: rgba(15, 23, 42, 0.95);
+    }
+
+    .faq-item h3 {
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .faq-item p {
+      font-size: 0.86rem;
+      color: #94a3b8;
+    }
+
+    .contact-card {
+      background: radial-gradient(circle at top, #020617, #020617 60%);
+      color: #e5e7eb;
+      border-radius: 1.5rem;
+      padding: 1.75rem;
+      margin-top: 1rem;
+      display: grid;
+      gap: 1.1rem;
+      border: 1px solid rgba(51, 65, 85, 0.9);
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 1);
+    }
+
+    .contact-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      align-items: flex-start;
+    }
+
+    .contact-card label {
+      font-size: 0.85rem;
+      color: #9ca3af;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-card input,
+    .contact-card textarea {
+      width: 100%;
+      border-radius: 0.9rem;
+      border: 1px solid #1f2937;
+      padding: 0.7rem 0.85rem;
+      background: rgba(15, 23, 42, 0.9);
+      color: #e5e7eb;
+      font-size: 0.9rem;
+      outline: none;
+    }
+
+    .contact-card input:focus,
+    .contact-card textarea:focus {
+      border-color: #38bdf8;
+      box-shadow: 0 0 0 1px #38bdf8;
+    }
+
+    .contact-card textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .contact-info {
+      font-size: 0.9rem;
+      color: #cbd5f5;
+    }
+
+    .contact-info p {
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-info strong {
+      color: #e5e7eb;
+    }
+
+    footer {
+      border-top: 1px solid rgba(30, 64, 175, 0.6);
+      padding: 1.6rem 1.5rem 2.2rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #6b7280;
+      margin-top: 2.5rem;
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.95), #020617 60%);
+    }
+
+    footer a {
+      color: #cbd5f5;
+      text-decoration: none;
+      border-bottom: 1px dotted rgba(148, 163, 184, 0.8);
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 2.4rem 1.8rem;
+        margin-top: 1.8rem;
+      }
+
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        display: none;
+      }
+
+      main {
+        padding-inline: 1.25rem;
+      }
+
+      .hero {
+        padding: 2rem 1.4rem;
+      }
+
+      .grid-3,
+      .grid-2 {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo">
+        <div class="logo-pill"></div>
+        EVOLVE
+      </div>
+      <nav>
+        <a href="#voordelen">Wat ik doe</a>
+        <a href="#aanpak">Werkwijze</a>
+        <a href="#tarieven">Tarieven</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="btn-secondary">Gratis kennismaking</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-kicker">
+          <span class="dot"></span>
+          Persoonlijke promotie voor rijscholen
+        </div>
+        <h1>
+          Ik zorg voor aandacht op social media.<br />
+          <span>Jij focust op lesgeven.</span>
+        </h1>
+        <p>
+          Met Evolve ben ik jouw persoonlijke adverteerder. Ik regel je
+          social media, advertenties en promotie, zodat jouw rijschool meer
+          aanvragen krijgt zonder dat jij uren kwijt bent aan marketing.
+        </p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn-primary">Plan een gratis kennismaking</a>
+          <a href="#voordelen" class="btn-secondary">Bekijk wat ik voor je doe</a>
+        </div>
+        <div class="hero-meta">
+          <span><strong>Gespecialiseerd in rijscholen</strong></span>
+          <span>✔ Ik doe jouw promotie ✔ Jij geeft de lessen</span>
+        </div>
+        <div class="pill-row" style="margin-top: 1rem;">
+          <span>Social media beheer</span>
+          <span>Advertenties (Instagram / TikTok)</span>
+          <span>Campagnes voor proeflessen</span>
+          <span>Meer zichtbaarheid in jouw regio</span>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <div class="hero-card-header">
+          <span>Voorbeeldsituatie (indicatief)</span>
+          <span class="hero-card-pill">Rijschool-klant via Evolve</span>
+        </div>
+        <h2>Van ‘af en toe een aanvraag’ naar een volle DM en mailbox</h2>
+        <p>
+          Door actieve content en gerichte advertenties in de regio
+          kwamen er elke week nieuwe aanvragen binnen voor proeflessen en pakketten –
+          zonder dat de rijschool zelf iets aan social media hoefde te doen.
+        </p>
+        <div class="metrics">
+          <div class="metric">
+            <strong>+150%</strong>
+            <span>Meer berichten via Instagram en WhatsApp</span>
+          </div>
+          <div class="metric">
+            <strong>€10–€15</strong>
+            <span>Gemiddelde kosten per nieuwe lead</span>
+          </div>
+          <div class="metric">
+            <strong>2–3 mnd</strong>
+            <span>Tot stabiel, constant resultaat</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- WAT IK DOE / VOORDELEN -->
+    <section id="voordelen">
+      <h2>Wat ik jouw rijschool precies bied</h2>
+      <p class="section-intro">
+        Je hoeft geen marketingbureau in te huren. Je werkt direct met mij
+        – één persoon die jouw rijschool leert kennen en je promotie regelt
+        alsof het zijn eigen bedrijf is.
+      </p>
+
+      <div class="grid grid-3">
+        <article class="card">
+          <h3>Social media die voor je werkt</h3>
+          <p>
+            Ik zorg voor content en posts die passen bij jouw rijschool:
+            lesauto's, leerlingen die slagen, acties en reviews. Geen dode
+            accounts meer, maar een pagina die vertrouwen uitstraalt.
+          </p>
+          <small>Instagram, TikTok en andere kanalen in overleg</small>
+        </article>
+        <article class="card">
+          <h3>Gerichte advertenties voor meer leerlingen</h3>
+          <p>
+            Ik zet advertenties in die jouw doelgroep echt bereiken:
+            jongeren in jouw regio die willen starten met rijlessen. Doel:
+            meer proeflessen, meer pakketten, minder lege uren.
+          </p>
+          <small>Focus op leads, niet alleen bereik</small>
+        </article>
+        <article class="card">
+          <h3>Één aanspreekpunt, korte lijntjes</h3>
+          <p>
+            Geen helpdesk of grote teams. Je appt of belt gewoon met mij.
+            Snel schakelen, duidelijk overleg en je weet altijd wat er loopt.
+          </p>
+          <small>Persoonlijk contact via WhatsApp of telefoon</small>
+        </article>
+      </div>
+    </section>
+
+    <!-- AANPAK -->
+    <section id="aanpak">
+      <h2>Hoe ik met jouw rijschool samenwerk</h2>
+      <p class="section-intro">
+        Ik werk simpel en persoonlijk. Geen moeilijke marketingtaal,
+        maar een duidelijk plan: meer aandacht, meer aanvragen.
+      </p>
+
+      <div class="grid grid-2">
+        <div>
+          <div class="steps">
+            <div class="step">
+              <h3>1. Kennismaking & doelen</h3>
+              <p>
+                We bespreken jouw rijschool, je regio, prijzen en doelen:
+                wil je vooral meer leerlingen, betere vulling door de week, of
+                een sterkere naam in de buurt?
+              </p>
+            </div>
+            <div class="step">
+              <h3>2. Simpel promotieplan</h3>
+              <p>
+                Ik laat je zien op welke kanalen ik je ga promoten, hoeveel
+                we ongeveer aan advertenties inzetten en wat je daarvan kunt verwachten.
+              </p>
+            </div>
+            <div class="step">
+              <h3>3. Ik ga aan de slag</h3>
+              <p>
+                Ik maak de content, zet advertenties aan en houd je accounts
+                actief. Jij hoeft niet zelf met advertenties of posts te rommelen.
+              </p>
+            </div>
+            <div class="step">
+              <h3>4. Updates & bijsturen</h3>
+              <p>
+                Je krijgt regelmatig een update: hoeveel berichten, aanvragen
+                en reacties er binnenkomen. Zo zien we samen wat werkt en wat beter kan.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Voorbeelden van wat ik voor je kan doen</h3>
+          <p>
+            Afhankelijk van jouw rijschool stel ik een combinatie samen van:
+          </p>
+          <ul class="price-list" style="margin-top: 0.8rem;">
+            <li>Beheer van je Instagram- en/of TikTok-account</li>
+            <li>Advertenties in jouw stad en omliggende dorpen</li>
+            <li>Acties voor proeflessen of “vrienden meenemen”-korting</li>
+            <li>Promotie rond piekmomenten (examens, vakanties, nieuwe lichtingen)</li>
+          </ul>
+          <p style="margin-top: 1rem; font-size: 0.86rem; color: #94a3b8;">
+            Jij blijft eigenaar van alle accounts. Ik ben degene achter de
+            schermen die zorgt dat je zichtbaar blijft en nieuwe leerlingen aantrekt.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TARIEVEN -->
+    <section id="tarieven">
+      <h2>Tarieven – werken met jouw eigen adverteerder</h2>
+      <p class="section-intro">
+        Ik werk met vaste maandpakketten voor rijscholen die écht willen groeien.
+        De exacte invulling stemmen we af op jouw doelen, regio en gewenste capaciteit.
+        Hieronder zie je de richtprijzen.
+      </p>
+
+      <div class="grid grid-2 pricing">
+        <article class="card">
+          <h3>Basis – voor lokale groei</h3>
+          <p class="price-tag">vanaf € 1.199 <span>per maand, excl. advertentiebudget</span></p>
+          <ul class="price-list">
+            <li>1 belangrijk social media kanaal actief houden (bijv. Instagram)</li>
+            <li>Doorlopende campagnes voor proeflessen en inschrijvingen</li>
+            <li>Persoonlijke strategie afgestemd op jouw rijschool en regio</li>
+            <li>Korte maandelijkse update met resultaten en concrete verbeterpunten</li>
+            <li>Maandelijks opzegbaar na de eerste 3 maanden</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Groei – maximale instroom in jouw regio</h3>
+          <p class="price-tag">vanaf € 1.799 <span>per maand, excl. advertentiebudget</span></p>
+          <ul class="price-list">
+            <li>Meerdere social media kanalen (bijv. Instagram + TikTok)</li>
+            <li>Doorlopende advertenties gericht op jouw ideale leerling in de regio</li>
+            <li>Actieve optimalisatie op aantal aanvragen en ingevulde proeflessen</li>
+            <li>Uitgebreide maandelijkse bespreking via call of WhatsApp</li>
+            <li>Campagnes rond piekmomenten (examens, vakanties, nieuwe lichtingen)</li>
+          </ul>
+        </article>
+      </div>
+
+      <p style="margin-top: 1rem; font-size: 0.86rem; color: #9ca3af;">
+        Het advertentiebudget bepalen we samen. Denk bijvoorbeeld aan
+        €150–€500 per maand, afhankelijk van jouw regio en hoeveel nieuwe leerlingen je wilt aantrekken.
+        <br /><strong>In de praktijk is één of een paar nieuwe leerlingen per maand vaak al genoeg om deze investering terug te verdienen.</strong>
+        <br /><br />
+        Niet zeker welk pakket past? <a href="#contact">Plan een gratis kennismaking</a>, dan kijk ik met je mee.
+      </p>
+    </section>
+
+    <!-- FAQ -->
+    <section aria-label="Veelgestelde vragen">
+      <h2>Veelgestelde vragen</h2>
+      <div class="grid grid-2" style="margin-top: 1.4rem;">
+        <div class="faq-item">
+          <h3>Ben jij een marketingbureau?</h3>
+          <p>
+            Nee. Evolve is geen groot bureau, maar één persoon: ik. Dat betekent
+            persoonlijk contact, snelle reacties en iemand die jouw rijschool echt kent.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>Moet ik zelf nog posten of adverteren?</h3>
+          <p>
+            Hoeft niet. Als je wilt, neem ik alles rondom promotie over. Jij kunt natuurlijk
+            altijd zelf ook iets posten, maar het hoeft niet.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>Hoe snel merk ik verschil?</h3>
+          <p>
+            Vaak zie je binnen 4–8 weken meer berichten, DM’s en aanvragen.
+            Het verschilt per regio, maar je krijgt van mij altijd eerlijke verwachtingen.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>Kan ik eerst rustig kennismaken?</h3>
+          <p>
+            Ja. Een kennismaking is altijd gratis en vrijblijvend. We kijken
+            samen of ik de juiste match ben voor jouw rijschool.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Samen werken aan meer aandacht voor jouw rijschool?</h2>
+      <p class="section-intro">
+        Laat je gegevens achter en ik neem persoonlijk contact met je op voor
+        een korte kennismaking. Geen verplichtingen, wel duidelijkheid.
+      </p>
+
+      <div class="contact-grid">
+        <form class="contact-card" onsubmit="event.preventDefault(); alert('Dit is een demo. Verbind dit formulier later met je eigen e-mailadres.');">
+          <div>
+            <label for="naam">Naam</label>
+            <input id="naam" type="text" placeholder="Jouw naam" required />
+          </div>
+          <div>
+            <label for="rijschool">Naam rijschool</label>
+            <input id="rijschool" type="text" placeholder="Bijv. Rijschool Evolve" required />
+          </div>
+          <div>
+            <label for="email">E-mailadres</label>
+            <input id="email" type="email" placeholder="jij@rijschool.nl" required />
+          </div>
+          <div>
+            <label for="telefoon">Telefoonnummer</label>
+            <input id="telefoon" type="tel" placeholder="06 – ..." />
+          </div>
+          <div>
+            <label for="bericht">Waar wil je vooral in groeien?</label>
+            <textarea id="bericht" placeholder="Bijv. meer leerlingen in de avond / meer aanvragen via Instagram..."></textarea>
+          </div>
+          <div>
+            <button class="btn-primary" type="submit">Verstuur & plan kennismaking</button>
+          </div>
+        </form>
+
+        <aside class="contact-info">
+          <p><strong>Direct contact opnemen?</strong></p>
+          <p>
+            ✉️ Mail: <span>onur_ozturk61@outlook.com</span><br />
+            📱 WhatsApp: <span>06-34652761</span>
+          </p>
+          <p style="margin-top: 0.8rem;">
+            Handig om erbij te zetten:<br />
+            – Waar je rijschool zit<br />
+            – Hoeveel leerlingen je ongeveer hebt<br />
+            – Wat je graag wilt verbeteren
+          </p>
+          <p style="margin-top: 0.8rem; font-size: 0.86rem; color: #9ca3af;">
+            Ik reageer zo snel mogelijk met een voorstel voor datum en tijd.
+          </p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Evolve – Jouw adverteerder voor rijscholen. Gemaakt met ♥.  
+    Aanpassen? Open <code>index.html</code> in een teksteditor.
+  </footer>
+
+  <script>
+    // automatisch jaartal updaten
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
